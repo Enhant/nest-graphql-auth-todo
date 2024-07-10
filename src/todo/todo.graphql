@@ -1,0 +1,23 @@
+type Todo {
+  id: ID!
+  title: String!
+  description: String
+}
+
+input CreateTodoInput {
+  title: String!
+  description: String
+}
+
+type Query {
+  todos: [Todo!]!
+}
+
+type Mutation {
+  createTodo(createTodoInput: CreateTodoInput!): Todo!
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

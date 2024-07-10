@@ -1,0 +1,68 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Todo {
+  id: ID!
+  title: String!
+  description: String!
+  status: Float!
+}
+
+type User {
+  id: ID!
+  username: String!
+}
+
+type Query {
+  profile: User!
+  todos: [Todo!]!
+  todosFiltered(filter: TodoFilterInput!): [Todo!]!
+}
+
+input TodoFilterInput {
+  id: ID!
+  title: String
+  status: Float
+}
+
+type Mutation {
+  register(registerInput: RegisterInput!): Boolean!
+  login(loginInput: LoginInput!): String!
+  createTodo(createTodoInput: CreateTodoInput!): Todo!
+  updateTodo(updateTodoInput: UpdateTodoInput!): Todo!
+  deleteTodo(id: Float!): Boolean!
+}
+
+input RegisterInput {
+  username: String!
+  password: String!
+}
+
+input LoginInput {
+  username: String!
+  password: String!
+}
+
+input CreateTodoInput {
+  title: String!
+  description: String
+  status: TodoStatus! = OPEN
+  user: UserInput!
+}
+
+enum TodoStatus {
+  OPEN
+  COMPLETED
+}
+
+input UserInput {
+  id: ID!
+}
+
+input UpdateTodoInput {
+  id: ID!
+  title: String
+  description: String
+  status: Float
+}

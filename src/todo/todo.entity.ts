@@ -21,6 +21,9 @@ export class Todo {
   @Field()
   status: TodoStatus;
 
+  @Field()
+  completed: boolean;
+
   @ManyToOne(() => User, user => user.todos, { eager: true })
   user: User;
 }

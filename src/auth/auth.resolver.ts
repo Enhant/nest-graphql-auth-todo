@@ -9,10 +9,10 @@ import { GqlAuthGuard } from './gql-auth.guard';
 export class AuthResolver {
   constructor(private readonly authService: AuthService) {}
 
-  @Mutation(() => Boolean)
+  @Mutation(() => User)
   async register(@Args('registerInput') registerInput: RegisterInput) {
-    await this.authService.register(registerInput);
-    return true;
+    const user = await this.authService.register(registerInput);
+    return user;
   }
 
   @Mutation(() => String)

@@ -1,9 +1,9 @@
 {
-  "name": "graphql-auth",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
+  "name": "nest-graphql-auth-todo-template",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <a href=\"http://nestjs.com/\" target=\"blank\"><img src=\"https://nestjs.com/img/logo-small.svg\" width=\"200\" alt=\"Nest Logo\" /></a> </p>",
+  "author": "Enhant",
+  "private": false,
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
@@ -77,5 +77,23 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "main": "src/main.ts",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enhant/nest-graphql-auth-todo.git"
+  },
+  "keywords": [
+    "template",
+    "nest",
+    "todo",
+    "graphql"
+  ],
+  "bugs": {
+    "url": "https://github.com/Enhant/nest-graphql-auth-todo/issues"
+  },
+  "homepage": "https://github.com/Enhant/nest-graphql-auth-todo#readme"
 }

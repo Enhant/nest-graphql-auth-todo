@@ -33,7 +33,7 @@ export class TodoResolver {
       ...context.req.user,
       id: context.req.user.id,
     });
-  } 
+  }
 
   @Query(() => [Todo])
   @UseGuards(GqlAuthGuard)

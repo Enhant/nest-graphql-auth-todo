@@ -9,6 +9,7 @@ export class AuthController {
 
   @Post('register')
   async register(@Body() body: RegisterInput) {
+    console.log('body', body);
     return this.authService.register(body);
   }
 

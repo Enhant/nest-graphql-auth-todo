@@ -7,6 +7,7 @@ type Todo {
   title: String!
   description: String!
   status: Float!
+  completed: Boolean!
 }
 
 type User {
@@ -27,7 +28,7 @@ input TodoFilterInput {
 }
 
 type Mutation {
-  register(registerInput: RegisterInput!): Boolean!
+  register(registerInput: RegisterInput!): User!
   login(loginInput: LoginInput!): String!
   createTodo(createTodoInput: CreateTodoInput!): Todo!
   updateTodo(updateTodoInput: UpdateTodoInput!): Todo!
